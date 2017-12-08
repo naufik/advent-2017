@@ -15,5 +15,6 @@ def parse_sheet(text):
 	''' Parses a string into a 2d spreadsheet of floats '''
 	return [[float(entry) for entry in line.split('\t')] for line in text.split('\n')[:-1]]
 
+# Opens the testcase and prints the checksum
 sheet = parse_sheet(open("testcase", "r").read())
 print(sheet_checksum(sheet))
